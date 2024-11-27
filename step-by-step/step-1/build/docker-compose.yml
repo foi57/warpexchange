@@ -39,10 +39,12 @@ services:
     image: mysql:8.0
     container_name: mysql
     ports:
-      - "3306:3306"
+      - "3308:3306"
     command: --default-authentication-plugin=mysql_native_password
+
     environment:
       - MYSQL_ROOT_PASSWORD=password
     volumes:
       - "./sql/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql:ro"
       - "./docker/mysql-data:/var/lib/mysql"
+

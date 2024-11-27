@@ -75,7 +75,7 @@ spring:
 
   # datasource:
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}/${DB_NAME:exchange}?useSSL=false&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3308}/${DB_NAME:exchange}?useSSL=false&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:password}
     driver-class-name: com.mysql.cj.jdbc.Driver
