@@ -124,6 +124,28 @@ public class DbTemplate {
         });
     }
 
+    public <T> void insertIgnore(Stream<T> beans) {
+        beans.forEach((bean) -> {
+            doInsert(bean, true);
+        });
+    }
+
+    public <T> void insert(List<T> beans){
+        for (T bean : beans){
+            doInsert(bean,false);
+        }
+    }
+
+    public <T> void insetIgnore(List<T> beans){
+        for (T bean : beans){
+            doInsert(bean,true);
+        }
+    }
+
+    public <T> void insert(T bean) {
+        doInsert(bean, false);
+    }
+
     public <T> void insertIgnore(T bean){
         doInsert(bean,true);
     }

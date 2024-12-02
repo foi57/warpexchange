@@ -7,8 +7,8 @@ import com.itranswarp.exchange.db.DbTemplate;
 /**
  * Service with db support.
  */
-public abstract class AbstractDbService extends LoggerSupport {
 
+public abstract class AbstractDbService extends LoggerSupport {
     @Autowired
     protected DbTemplate db;
 }

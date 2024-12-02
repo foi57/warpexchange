@@ -3,7 +3,7 @@ package com.itranswarp.exchange;
 public enum ApiError {
     PARAMETER_INVALID,
 
-    AUTO_SIGNIN_REQUIRED,
+    AUTH_SIGNIN_REQUIRED,
 
     AUTH_SIGNIN_FAILED,
 

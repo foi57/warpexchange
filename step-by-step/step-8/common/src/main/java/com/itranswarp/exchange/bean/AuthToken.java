@@ -33,7 +33,7 @@ public record AuthToken(Long userId, long expiresAt) {
 
     public static AuthToken fromSecureString(String b64token, String hmacKey) {
         String token = new String(Base64.getUrlDecoder().decode(b64token), StandardCharsets.UTF_8);
-        String[] ss = token.split("\\:");
+        String[] ss = token.split(":");
         if (ss.length != 3) {
             throw new IllegalArgumentException("Invalid token.");
         }

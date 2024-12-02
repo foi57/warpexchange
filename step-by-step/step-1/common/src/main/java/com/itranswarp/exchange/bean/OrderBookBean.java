@@ -1,9 +1,13 @@
 package com.itranswarp.exchange.bean;
 
+import com.itranswarp.exchange.util.JsonUtil;
+
 import java.math.BigDecimal;
 import java.util.List;
 
 public class OrderBookBean {
+
+    public static final String EMPTY = JsonUtil.writeJson(new OrderBookBean(0,BigDecimal.ZERO,List.of(),List.of()));
 
     public long sequenceId;
 
